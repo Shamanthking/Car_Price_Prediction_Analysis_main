@@ -3,3 +3,21 @@
 .ipynb_checkpoints/
 catboost_info/
 __pycache__/
+# Ignore datasets
+cardekho_dataset.csv
+*.csv
+
+# Ignore trained ML models
+*.pkl
+CatBoosting_Regressor.pkl
+K-Neighbors_Regressor.pkl
+Random_Forest_Regressor.pkl
+XGBRegressor.pkl
+preprocessor.pkl
+
+# Ignore auto-generated folders
+catboost_info/
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
