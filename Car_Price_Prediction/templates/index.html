@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css"> <!-- External CSS -->
+    <title>Car Price Predictor</title>
+</head>
+<body>
+    <header class="custom-header">
+        <h1>Car Price Prediction</h1>
+        <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="developer.html">Developer</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="card mt-5" style="width: 100%; height: 100%;">
+                <div class="card-header text-center">
+                    <h3 class="form-header">Select below each feature of the car to predict the price:</h3>
+                </div>
+                <div class="card-body">
+                    
+                    <form id="car-form" action="/predict" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 form-group text-center">
+                                <label><b>Select Brand:</b></label>
+                                <select class="form-control" id="brand" name="brand" required onchange="loadModel()">
+                                    {% for bran in brand %}
+                                        <option value="{{bran}}">{{bran}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group text-center">
+                                <label><b>Select Car Model:</b></label>
+                                <select class="form-control" id="model" name="model" required>
+                                    {% for mode in model %}
+                                        <option value="{{mode}}">{{mode}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <label><b>Select Vehicle Age:</b></label>
+                            <select class="form-control" id="vehicle_age" name="vehicle_age" required>
+                                {% for age in vehicle_age %}
+                                    <option value="{{age}}">{{age}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <label><b>Enter Number of Kilometers Driven:</b></label>
+                            <input class="form-control" type="text" id="km_driven" name="km_driven" placeholder="Enter the distance traveled">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 form-group text-center">
+                                <label><b>Select Seller Type:</b></label>
+                                <select class="form-control" id="seller_type" name="seller_type" required>
+                                    {% for seller in seller_type %}
+                                        <option value="{{seller}}">{{seller}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-4 form-group text-center">
+                                <label><b>Select Fuel Type:</b></label>
+                                <select class="form-control" id="fuel_type" name="fuel_type" required>
+                                    {% for fuel in fuel_type %}
+                                        <option value="{{fuel}}">{{fuel}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="col-md-4 form-group text-center">
+                                <label><b>Select Transmission Type:</b></label>
+                                <select class="form-control" id="transmission_type" name="transmission_type" required>
+                                    {% for transmission in transmission_type %}
+                                        <option value="{{transmission}}">{{transmission}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <label><b>Enter Mileage (per liter):</b></label>
+                            <input class="form-control" type="text" id="mileage" name="mileage" placeholder="Enter mileage of the car">
+                        </div>
+
+                        <div class="form-group text-center">
+                            <label><b>Enter Engine Capacity (CC):</b></label>
+                            <input class="form-control" type="text" id="engine" name="engine" placeholder="Enter engine capacity in CC">
+                        </div>
+
+                        <div class="form-group text-center">
+                            <label><b>Enter Maximum Power:</b></label>
+                            <input class="form-control" type="text" id="max_power" name="max_power" placeholder="Enter maximum power">
+                        </div>
+
+                        <div class="form-group text-center">
+                            <label><b>Select Number of Seats:</b></label>
+                            <select class="form-control" id="seats" name="seats" required>
+                                {% for seat in seats %}
+                                    <option value="{{seat}}">{{seat}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary">Predict Price</button>
+                        </div>
+                    </form>
+                    <div id="error-message" class="alert alert-danger" style="display: none;"></div>
+                    <div id="prediction-result" class="alert alert-success" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <h3><span id="prediction-result"></span></h3>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Body styling */
+body {
+    background: url('/static/images/black-car.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: #ede5e5; /* Lighter text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Lighten non-text areas */
+.card {
+    background-color: rgba(255, 255, 255, 0.217); /* Slightly more opaque */
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.393); /* More defined shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.395); /* More intense shadow */
+}
+
+.card-header {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a95353; /* Highlighted text */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: transparent; /* Transparent background */
+    color: #151514; /* Highlighted text */
+    font-size: 1.2rem;
+    padding: 12px 35px;
+    border-radius: 50px; /* Rounded button */
+    border: 2px solid #f39c12; /* Solid border for contrast */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #f39c12; /* Highlight background on hover */
+    color: white;
+    border-color: #f39c12;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add shadow on hover */
+}
+
+/* Form styling */
+.form-group label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #f39c12; /* Highlighted text */
+}
+
+input, select {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly brighter background */
+    color: #333; /* Darker text for contrast */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #f39c12; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.7);
+}
+
+input::placeholder, select::placeholder {
+    color: #aaa; /* Subtle placeholder color */
+}
+
+/* Highlight headings or titles */
+h1, h2, h3, h4, h5, h6 {
+    color: #18d56a; /* Highlighted text */
+    margin-bottom: 10px;
+}
+
+/* Custom header styling */
+.custom-header {
+    background: linear-gradient(to right, #007bff83, #0057b383); /* Gradient background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #f39c12; /* Bottom accent line */
+}
+
+.nav-links {
+    margin-top: 15px;
+}
+
+.nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #f39c12; /* Highlight on hover */
+}
+
+/* Form header styling */
+.form-header {
+    font-size: 20px; /* Slightly larger font size */
+    color: #ff8c00; /* Keeps the orange color */
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adds subtle depth */
+}
+
+/* Add subtle hover effect to inputs and selects */
+input:hover, select:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully white on hover */
+    border-color: #f39c12; /* Subtle highlight */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+    }
+
+    .card-header {
+        font-size: 1.8rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+
+    .form-header {
+        font-size: 16px;
+    }
+}
