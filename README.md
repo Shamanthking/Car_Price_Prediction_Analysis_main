@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # USED_CAR_PRICE_PREDICTION
 
 ## Overview
@@ -100,3 +101,6 @@ This project is open-source and available under the **MIT License**.
 
 
 ![Screenshot 2025-02-21 215328](https://github.com/user-attachments/assets/9ae4e791-e394-4c10-afc9-dfec5f18ccd5)
+=======
+# Car_Price_Prediction_Analysis_main
+>>>>>>> eeb6c43ee9a666919a5177e700ccc9b182c0bd02
