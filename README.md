@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # USED_CAR_PRICE_PREDICTION
 
 ## Overview
@@ -93,8 +92,6 @@ The Flask-based web application provides an interactive interface where users ca
 ## Conclusion
 This project successfully predicts the price of used cars using machine learning models. It demonstrates data preprocessing, model training, evaluation, and web-based deployment using Flask.
 
-## Contributors
-- **Deekshith N** (GitHub: [Deekshithshaiva05](https://github.com/Deekshithshaiva05))
 
 ## License
 This project is open-source and available under the **MIT License**.
@@ -103,4 +100,4 @@ This project is open-source and available under the **MIT License**.
 ![Screenshot 2025-02-21 215328](https://github.com/user-attachments/assets/9ae4e791-e394-4c10-afc9-dfec5f18ccd5)
 =======
 # Car_Price_Prediction_Analysis_main
->>>>>>> eeb6c43ee9a666919a5177e700ccc9b182c0bd02
+
